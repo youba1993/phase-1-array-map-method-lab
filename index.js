@@ -10,7 +10,15 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-
-const titleCased = () => {
-  return tutorials
+const tuto1 = tutorials.map(function (arr) {
+  let names = arr.split(" ");
+    names.forEach(element => {
+    names[names.indexOf(element)] = element.charAt(0).toUpperCase() + element.slice(1)
+    })
+  return names.join(" "); 
+  });
+function titleCased() {
+  let tutorials = tuto1;
+  return tutorials;
 }
+console.log(titleCased())
